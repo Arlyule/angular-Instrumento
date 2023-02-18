@@ -1,22 +1,49 @@
 
-<div class="box">
-    <div class="contenedor">
-        <h5>Registro</h5>
-        <br>
-        <br>
-        <input type="text" name="usuario">
-        <br>
-        <br>
-        <input type="email" name="correo">
-        <br>
-        <br>
-        <input type="password" name="contraseña">
-        <br>
-        <div class="botones">
-            <button type="button">Registrar</button>
-            <br>
-            <button routerLink="/principal" type="button">Salir</button>
-        </div>
+<section class="background-radial-gradient overflow-hidden">
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+        <div class="row gx-lg-5 align-items-center mb-5">
+            <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+                <h1 class="my-5 display-5 fw-bold ls-tight" style="color:
+                    hsl(301, 75%, 25%)">
+                    Registrarse <br />
+                    <span style="color: hsl(218, 81%, 75%)">En nuestra Pagina</span>
+                </h1>
+                <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                </p>
+            </div>
 
+            <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+
+                <div class="card bg-glass">
+                    <div class="card-body px-4 py-5 px-md-5">
+                        <form>
+
+                            <div class="form-outline mb-4">
+                                <input type="email" id="email" name="email"
+                                    class="form-control" [(ngModel)]="email"/>
+                                <label class="form-label" >Correo Electronico</label>
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <input type="password" id="password" name="password" class="form-control"[(ngModel)]="password"/>
+                                <label class="form-label">Contraseña</label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control"[(ngModel)]="confirmPassword"/>
+                                <label class="form-label">Confirmar Contraseña</label>
+                            </div>
+
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary" (click)="register()">
+                                Registrarse
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
